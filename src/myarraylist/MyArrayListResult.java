@@ -14,6 +14,8 @@ public class MyArrayListResult {
 
         System.out.println("Розмір масиву: " + myArrayListString.size());
 
+        System.out.println("Отримання елементу за індексом: " + myArrayListString.get(2));
+
         System.out.println("-------------------------------------------------");
 
         MyArrayList<Integer> myArrayListInteger = new MyArrayList<>();
@@ -27,8 +29,8 @@ public class MyArrayListResult {
 
         System.out.println("Розмір масиву: " + myArrayListInteger.size());
 
+        System.out.println("Отримання елементу за індексом: " + myArrayListInteger.get(3));
 
 
-
-    }
+    }git
 }

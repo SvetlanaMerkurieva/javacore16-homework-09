@@ -24,6 +24,9 @@ public class MyArrayList <E> {
     public int size() {
         return index;
     }
+    public E get (int index) {
+        return (E) array[index];
+    }
     @Override
     public String toString() {
         StringJoiner result = new StringJoiner(", ");
