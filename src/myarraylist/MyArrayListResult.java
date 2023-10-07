@@ -16,6 +16,12 @@ public class MyArrayListResult {
 
         System.out.println("Отримання елементу за індексом: " + myArrayListString.get(2));
 
+        myArrayListString.clear();
+        System.out.println("Очищення масиву:");
+        System.out.println("Mасив після очищення: " + myArrayListString);
+        System.out.println("Розмір: " + myArrayListString.size());
+        git
+
         System.out.println("-------------------------------------------------");
 
         MyArrayList<Integer> myArrayListInteger = new MyArrayList<>();
@@ -31,6 +37,10 @@ public class MyArrayListResult {
 
         System.out.println("Отримання елементу за індексом: " + myArrayListInteger.get(3));
 
+        myArrayListInteger.clear();
+        System.out.println("Очищення масиву:");
+        System.out.println("Mасив після очищення: " + myArrayListInteger);
+        System.out.println("Розмір: " + myArrayListInteger.size());
 
-    }git
+    }
 }

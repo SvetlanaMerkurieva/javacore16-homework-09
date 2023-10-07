@@ -27,6 +27,10 @@ public class MyArrayList <E> {
     public E get (int index) {
         return (E) array[index];
     }
+    public void clear() {
+        array = new Object[10];
+        index = 0;
+    }
     @Override
     public String toString() {
         StringJoiner result = new StringJoiner(", ");
