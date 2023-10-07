@@ -21,6 +21,9 @@ public class MyArrayList <E> {
             array = newArray;
         }
     }
+    public int size() {
+        return index;
+    }
     @Override
     public String toString() {
         StringJoiner result = new StringJoiner(", ");

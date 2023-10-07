@@ -12,6 +12,8 @@ public class MyArrayListResult {
         myArrayListString.add("book");
         System.out.println("Додавання елементів в масив: " + myArrayListString);
 
+        System.out.println("Розмір масиву: " + myArrayListString.size());
+
         System.out.println("-------------------------------------------------");
 
         MyArrayList<Integer> myArrayListInteger = new MyArrayList<>();
@@ -22,6 +24,8 @@ public class MyArrayListResult {
             myArrayListInteger.add(i);
         }
         System.out.println("Додавання елементів в масив: " + myArrayListInteger);
+
+        System.out.println("Розмір масиву: " + myArrayListInteger.size());
 
 
 
