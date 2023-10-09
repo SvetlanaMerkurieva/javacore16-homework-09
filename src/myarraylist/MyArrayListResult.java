@@ -16,11 +16,14 @@ public class MyArrayListResult {
 
         System.out.println("Отримання елементу за індексом: " + myArrayListString.get(2));
 
+        myArrayListString.remove(1);
+        System.out.println("Видалення елементу з масиву: " + myArrayListString);
+
         myArrayListString.clear();
         System.out.println("Очищення масиву:");
         System.out.println("Mасив після очищення: " + myArrayListString);
         System.out.println("Розмір: " + myArrayListString.size());
-        git
+
 
         System.out.println("-------------------------------------------------");
 
@@ -28,7 +31,7 @@ public class MyArrayListResult {
         System.out.println("Результат роботи з типом int:");
         System.out.println("Створення масиву: " + myArrayListInteger);
 
-        for (int i = 5; i < 10; i++) {
+        for (int i = 5; i < 12; i++) {
             myArrayListInteger.add(i);
         }
         System.out.println("Додавання елементів в масив: " + myArrayListInteger);
@@ -37,10 +40,12 @@ public class MyArrayListResult {
 
         System.out.println("Отримання елементу за індексом: " + myArrayListInteger.get(3));
 
+        myArrayListInteger.remove(5);
+        System.out.println("Видалення елементу з масиву: " + myArrayListInteger);
+
         myArrayListInteger.clear();
         System.out.println("Очищення масиву:");
         System.out.println("Mасив після очищення: " + myArrayListInteger);
         System.out.println("Розмір: " + myArrayListInteger.size());
-
     }
 }

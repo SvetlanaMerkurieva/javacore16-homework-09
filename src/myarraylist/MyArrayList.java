@@ -21,6 +21,19 @@ public class MyArrayList <E> {
             array = newArray;
         }
     }
+    public void remove(int index) {
+        Object[] newArray = new Object[this.index];
+        int k = 0;
+        for (int i = 0; i < this.index; i++ ) {
+            if (i != index) {
+                newArray[k] = array[i];
+                k++;
+            }
+        }
+        array = newArray;
+        this.index = k;
+    }
+
     public int size() {
         return index;
     }
