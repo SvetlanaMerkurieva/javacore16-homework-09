@@ -46,10 +46,11 @@ public class MyLinkedList <E> {
     }
     @Override
     public String toString() {
+        Node<E> elementToString = element;
         StringJoiner result = new StringJoiner(", ");
         for (int i = 1; i <= size; i++) {
-            result.add(element.getValue().toString());
-            element = element.getNext();
+            result.add(elementToString.getValue().toString());
+            elementToString = elementToString.getNext();
         }
         return "[" + result + "]";
     }
