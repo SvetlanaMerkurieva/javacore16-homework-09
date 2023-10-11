@@ -12,7 +12,11 @@ public class MyLinkedListResult {
 
         System.out.println(list);
         System.out.println(list.size());
+        list.clear();
 
+        System.out.println("List: " + list + ", size: " + list.size());
+
+        //System.out.println(list.get(2));
 
     }
 }

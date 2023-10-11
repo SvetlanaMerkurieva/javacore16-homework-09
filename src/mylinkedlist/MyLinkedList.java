@@ -1,5 +1,6 @@
 package mylinkedlist;
 
+import java.util.LinkedList;
 import java.util.StringJoiner;
 
 public class MyLinkedList <E> {
@@ -24,11 +25,27 @@ public class MyLinkedList <E> {
     public int size() {
         return size;
     }
+    public void clear() {
+        element = null;
+        size = 0;
+    }
+    public E get(int index) {
+        Node<E> search = element;
+        if (search == null) {
+            throw new IndexOutOfBoundsException("List is empty");
+        }
+
+        for (int i = 0; i < index; i++) {
+            search = search.getNext();
+
+            if (search == null) {
+                throw new IndexOutOfBoundsException("Invalid index: " + index + ", Size: " + size());
+            }
+        }
+        return search.getValue();
+    }
     @Override
     public String toString() {
-        if (element == null) {
-            return "Список порожній";
-        }
         StringJoiner result = new StringJoiner(", ");
         for (int i = 1; i <= size; i++) {
             result.add(element.getValue().toString());
