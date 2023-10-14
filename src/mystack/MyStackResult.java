@@ -1,5 +1,7 @@
 package mystack;
 
+import java.util.HashMap;
+
 public class MyStackResult {
     public static void main(String[] args) {
         MyStack<String> stack = new MyStack<>();
@@ -29,5 +31,7 @@ public class MyStackResult {
 
         stack.clear();
         System.out.println("Очищення колекції: " + stack + ", розмір: " + stack.size());
+
+        HashMap<String, String> map = new HashMap<>();
     }
 }
