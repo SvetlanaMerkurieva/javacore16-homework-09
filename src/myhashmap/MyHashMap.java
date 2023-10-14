@@ -14,18 +14,29 @@ public class MyHashMap<K, V> {
 
         if (size == 0) {
             element = node;
+            size++;
         } else {
             Node<K, V> last = element;
-            for (int i = 0; i < size; i++) {
-                if (!last.getKey().equals(key) || last.getNext() != null) {
+            if (!isKey(key)) {
+                while (last.getNext() != null) {
                     last = last.getNext();
                 }
+                last.setNext(node);
+                size++;
             }
-            last.setNext(node);
         }
-        size++;
     }
     public int size() { return size;}
+    public boolean isKey(K key) {
+        Node<K, V> elementIsKey = element;
+        for (int i = 0; i < size; i++) {
+            if (elementIsKey.getKey().equals(key)) {
+                return true;
+            }
+            elementIsKey = elementIsKey.getNext();
+        }
+        return false;
+    }
     @Override
     public String toString() {
         Node<K, V> elementToString = element;
