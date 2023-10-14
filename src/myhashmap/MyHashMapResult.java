@@ -16,5 +16,11 @@ public class MyHashMapResult {
         hashMap.put("Worker", 30000);
 
         System.out.println("Ще додавання елементів в коллекцію: " + hashMap + ", розмір: " + hashMap.size() + "\n(з однаковим ключем НЕ додається)");
+
+        System.out.println("Отримання значення зарплатні Accounter: " + hashMap.get("Accounter"));
+        System.out.println("Отримання значення зарплатні Head of production: " + hashMap.get("Head of production"));
+
+        hashMap.clear();
+        System.out.println("Очищення коллекції: " + hashMap + ", розмір: " + hashMap.size());
     }
 }

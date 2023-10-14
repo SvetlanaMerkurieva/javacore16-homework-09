@@ -27,6 +27,19 @@ public class MyHashMap<K, V> {
         }
     }
     public int size() { return size;}
+    public void clear() {
+        element = new Node<>();
+        size = 0;
+    }
+    public V get(K key) {
+        Node<K, V> search = element;
+        for (int i = 0; i < size; i++) {
+            if (!search.getKey().equals(key)) {
+                search = search.getNext();
+            }
+        }
+        return search.getValue();
+    }
     public boolean isKey(K key) {
         Node<K, V> elementIsKey = element;
         for (int i = 0; i < size; i++) {
