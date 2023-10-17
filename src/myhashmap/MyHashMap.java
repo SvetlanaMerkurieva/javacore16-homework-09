@@ -26,6 +26,18 @@ public class MyHashMap<K, V> {
             }
         }
     }
+    public void remove(int index) {
+        Node<K, V> elementPrevDell = element;
+        for (int i = 0; i < index-1; i++) {
+            elementPrevDell = elementPrevDell.getNext();
+        }
+        Node<K, V> elementNextDell = element;
+        for (int i = 0; i < index+1; i++) {
+            elementNextDell = elementNextDell.getNext();
+        }
+        elementPrevDell.setNext(elementNextDell);
+        size--;
+    }
     public int size() { return size;}
     public void clear() {
         element = new Node<>();
@@ -50,6 +62,7 @@ public class MyHashMap<K, V> {
         }
         return false;
     }
+
     @Override
     public String toString() {
         Node<K, V> elementToString = element;

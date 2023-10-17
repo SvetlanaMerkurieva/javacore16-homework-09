@@ -22,6 +22,7 @@ public class MyLinkedList <E> {
         }
         size++;
     }
+
     public int size() {
         return size;
     }
@@ -31,17 +32,9 @@ public class MyLinkedList <E> {
     }
     public E get(int index) {
         Node<E> search = element;
-        if (search == null) {
-            throw new IndexOutOfBoundsException("List is empty");
-        }
-
-        for (int i = 0; i < index; i++) {
-            search = search.getNext();
-
-            if (search == null) {
-                throw new IndexOutOfBoundsException("Invalid index: " + index + ", Size: " + size());
+            for (int i = 0; i < index; i++) {
+                search = search.getNext();
             }
-        }
         return search.getValue();
     }
     @Override
