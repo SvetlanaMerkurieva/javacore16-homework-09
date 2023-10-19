@@ -17,6 +17,9 @@ public class MyLinkedListResult {
         System.out.println("Отримання елементу за індексом 1: " + list.get(1));
         System.out.println("Отримання елементу за індексом 3: " + list.get(3));
 
+        list.remove(2);
+        System.out.println("Cклад списку після видалення елементу під індексом 2: " + list + ", розмір: " + list.size());
+
         list.clear();
         System.out.println("Список після очищення: List: " + list + ", size: " + list.size());
 
