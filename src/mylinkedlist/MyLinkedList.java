@@ -38,6 +38,11 @@ public class MyLinkedList <E> {
         Node<E> search = elementFirst;
             for (int i = 0; i < index; i++) {
                 search = search.getNext();
+
+                if (search == null) {
+                    String message = "Елементу з індексом " + index + " не існує";
+                    return (E) message;
+                }
             }
         return search.getValue();
     }
@@ -49,6 +54,10 @@ public class MyLinkedList <E> {
         Node<E> elementNextDell = elementFirst;
         for (int i = 0; i < index+1; i++) {
             elementNextDell = elementNextDell.getNext();
+
+            if (elementNextDell == null) {
+                throw new IndexOutOfBoundsException("Елементу з індексом " + index + " не існує");
+            }
         }
         elementPrevDell.setNext(elementNextDell);
         size--;

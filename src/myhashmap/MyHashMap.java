@@ -34,6 +34,10 @@ public class MyHashMap<K, V> {
         Node<K, V> elementNextDell = element;
         for (int i = 0; i < index+1; i++) {
             elementNextDell = elementNextDell.getNext();
+
+            if (elementNextDell == null) {
+                throw new IndexOutOfBoundsException("Елементу з індексом " + index + " не існує");
+            }
         }
         elementPrevDell.setNext(elementNextDell);
         size--;

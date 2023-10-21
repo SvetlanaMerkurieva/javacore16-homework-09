@@ -14,9 +14,9 @@ public class MyArrayListResult {
 
         System.out.println("Розмір масиву: " + myArrayListString.size());
 
-        System.out.println("Отримання елементу за індексом: " + myArrayListString.get(2));
+        System.out.println("Отримання елементу за індексом 1: " + myArrayListString.get(1));
 
-        myArrayListString.remove(1);
+        myArrayListString.remove(2);
         System.out.println("Видалення елементу з масиву: " + myArrayListString);
 
         myArrayListString.clear();
@@ -38,7 +38,8 @@ public class MyArrayListResult {
 
         System.out.println("Розмір масиву: " + myArrayListInteger.size());
 
-        System.out.println("Отримання елементу за індексом: " + myArrayListInteger.get(3));
+        System.out.println("Отримання елементу за індексом 5: " + myArrayListInteger.get(5));
+        System.out.println("Отримання елементу за індексом 7: " + myArrayListInteger.get(7));
 
         myArrayListInteger.remove(5);
         System.out.println("Видалення елементу з масиву: " + myArrayListInteger);

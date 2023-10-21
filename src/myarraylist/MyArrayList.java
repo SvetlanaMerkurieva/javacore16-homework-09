@@ -22,6 +22,9 @@ public class MyArrayList <E> {
         }
     }
     public void remove(int index) {
+        if (array[index] == null) {
+            throw new IndexOutOfBoundsException("Елементу з індексом " + index + " не існує");
+        }
         Object[] newArray = new Object[this.index];
         int k = 0;
         for (int i = 0; i < this.index; i++ ) {
@@ -38,11 +41,18 @@ public class MyArrayList <E> {
         return index;
     }
     public E get (int index) {
+        if (array[index] == null) {
+            String message = "Елементу з індексом " + index + " не існує";
+            return (E) message;
+        }
         return (E) array[index];
     }
     public void clear() {
         array = new Object[10];
         index = 0;
+    }
+    public String message() {
+            return "Елементу з індексом " + index + " не існує";
     }
     @Override
     public String toString() {

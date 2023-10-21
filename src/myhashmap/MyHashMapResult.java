@@ -20,7 +20,7 @@ public class MyHashMapResult {
         System.out.println("Отримання значення зарплатні Accounter: " + hashMap.get("Accounter"));
         System.out.println("Отримання значення зарплатні Head of production: " + hashMap.get("Head of production"));
 
-        hashMap.remove(2);
+        hashMap.remove(3);
         System.out.println("Cклад коллекції після видалення: " + hashMap + ", розмір: " + hashMap.size());
 
         hashMap.clear();

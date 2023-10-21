@@ -32,6 +32,5 @@ public class MyStackResult {
         stack.clear();
         System.out.println("Очищення колекції: " + stack + ", розмір: " + stack.size());
 
-        HashMap<String, String> map = new HashMap<>();
     }
 }

@@ -26,6 +26,9 @@ public class MyStack <E> {
         return index;
     }
     public void remove(int index) {
+        if (array[index] == null) {
+            throw new IndexOutOfBoundsException("Елементу з індексом " + index + " не існує");
+        }
         Object[] newArray = new Object[array.length];
         int k = 0;
         for (int i = 0; i < this.index; i++) {
